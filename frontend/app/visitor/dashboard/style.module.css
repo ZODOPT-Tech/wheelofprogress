@@ -1,0 +1,215 @@
+/****************************************
+  GLOBAL BACKGROUND
+*****************************************/
+.container {
+  background: linear-gradient(135deg, #3c007a, #7a00ff);
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+  padding-bottom: 60px;
+}
+
+/****************************************
+  HEADER
+*****************************************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 60px;
+}
+
+/* LEFT: WHEELBRAND LOGO */
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* RIGHT: Company Info + Logout */
+.rightHeader {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.welcomeText {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Circular company logo */
+.companyLogo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: white;
+}
+
+/* Logout Icon Button */
+.logoutBtn {
+  width: 52px;
+  height: 52px;
+  background: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 24px;
+  color: #3c007a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s ease;
+  font-weight: bold;
+}
+
+.logoutBtn:hover {
+  background: #e9e9e9;
+  transform: scale(1.05);
+}
+
+/****************************************
+  PAGE TITLE
+*****************************************/
+.pageTitle {
+  margin-left: 60px;
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/****************************************
+  STATS CARDS
+*****************************************/
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 220px);
+  gap: 24px;
+  padding: 25px 60px;
+}
+
+.statCard {
+  background: white;
+  color: #3c007a;
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 8px 24px rgba(0,0,0,0.25);
+  transition: 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+}
+
+.statCard h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.statCard p {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/****************************************
+  ACTION BUTTONS
+*****************************************/
+.actionRow {
+  display: flex;
+  gap: 16px;
+  padding: 0 60px;
+  margin-top: 10px;
+}
+
+.primaryBtn {
+  background: #ffcc00;
+  color: #3c007a;
+  padding: 14px 26px;
+  font-weight: bold;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.25s ease;
+}
+
+.primaryBtn:hover {
+  background: #e6b800;
+  transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  background: white;
+  color: #3c007a;
+  padding: 14px 26px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.25s ease;
+}
+
+.secondaryBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/****************************************
+  TABLE WRAPPER
+*****************************************/
+.tableCard {
+  background: white;
+  color: #3c007a;
+  margin: 30px 60px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 30px rgba(0,0,0,0.25);
+}
+
+.tableCard h3 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/****************************************
+  TABLE
+*****************************************/
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  font-size: 14px;
+  text-align: left;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #ddd;
+}
+
+.table td {
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+/****************************************
+  CHECKOUT BUTTON
+*****************************************/
+.checkoutBtn {
+  background: #ff4d4d;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.checkoutBtn:hover {
+  background: #d93636;
+  transform: scale(1.05);
+}

@@ -1,0 +1,128 @@
+/* Disable page scrolling */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/******** BACKGROUND ********/
+.container {
+  background: linear-gradient(135deg, #3c007a, #7a00ff);
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow: hidden; /* prevent outer scroll */
+}
+
+/******** HEADER ********/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.companySection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.companyName {
+  font-size: 16px;
+}
+
+.companyLogo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: white;
+}
+
+/******** MAIN FORM CARD ********/
+.formCard {
+  width: 85%;
+  height: calc(100vh - 160px); /* Fit screen with header */
+  background: white;
+  color: #3c007a;
+  margin: 0 auto;
+  padding: 40px 50px;
+  border-radius: 22px;
+  overflow-y: auto; /* Only this scrolls */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 28px;
+}
+
+/******** FORM ROWS ********/
+.row3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
+.row3 input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+}
+
+.fullRow {
+  margin-bottom: 22px;
+}
+
+.fullRow input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+}
+
+/******** CHECKBOX GROUP ********/
+.checkboxGroup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 6px;
+  gap: 10px;
+  color: #3c007a;
+}
+
+/******** BUTTONS ********/
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.prevBtn,
+.nextBtn {
+  background: #7a00ff;
+  color: white;
+  padding: 16px 50px;
+  border-radius: 12px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  width: 48%;
+  cursor: pointer;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  background: #5c00c7;
+}

@@ -1,0 +1,110 @@
+/* BACKGROUND */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3c007a, #7a00ff);
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 60px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.backBtn {
+  background: white;
+  color: #3c007a;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* CENTER */
+.centerWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* CARD */
+.card {
+  width: 1100px;
+  background: white;
+  color: #3c007a;
+  padding: 30px 40px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 22px;
+}
+
+/* LABEL */
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+/* INPUTS */
+.input,
+.fileInput {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  font-size: 14px;
+}
+
+/* ROWS */
+.fullRow {
+  margin-bottom: 18px;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.row3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+/* BUTTON */
+.submitBtn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 15px;
+  background: #ffcc00;
+  color: #3c007a;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background: #e6b800;
+}

@@ -1,0 +1,134 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  background: linear-gradient(135deg, #3c007a, #7a00ff);
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+/******** HEADER ********/
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 60px;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.companySection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.companyLogo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+/******** CARD ********/
+.card {
+  width: 75%;
+  height: calc(100vh - 150px);
+  margin: 0 auto;
+  margin-top: 20px;
+  background: white;
+  color: #3c007a;
+  padding: 40px;
+  border-radius: 24px;
+  overflow-y: auto;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+/******** CAMERA CENTER ********/
+
+.cameraWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.cameraBtn, .captureBtn, .retakeBtn {
+  background: #7a00ff;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.videoContainer {
+  text-align: center;
+}
+
+.video {
+  width: 420px;
+  height: 320px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.photoPreview {
+  text-align: center;
+}
+
+.capturedPhoto {
+  width: 420px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+/******** FORM ********/
+
+.rowFull {
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  margin-top: 6px;
+}
+
+/******** BUTTONS ********/
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prevBtn, .nextBtn {
+  width: 48%;
+  padding: 16px;
+  background: #7a00ff;
+  color: white;
+  border-radius: 12px;
+  border: none;
+  font-size: 18px;
+}
+
+.prevBtn:hover, .nextBtn:hover {
+  background: #5c00c7;
+}
