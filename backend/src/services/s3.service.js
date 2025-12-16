@@ -1,16 +1,20 @@
 import { getS3Client } from "../config/aws.js";
-import { S3_BUCKET, AWS_REGION } from "../config/env.js";
+import { v4 as uuidv4 } from "uuid";
 
-export const uploadToS3 = async (buffer, name, type, folder) => {
-  const s3 = await getS3Client();
-  const key = `${folder}/${Date.now()}-${name}`;
+export const uploadToS3 = async ({ buffer, mimetype, folder }) => {
+  const s3 = getS3Client();
 
-  await s3.putObject({
-    Bucket: S3_BUCKET,
-    Key: key,
-    Body: buffer,
-    ContentType: type
-  }).promise();
+  const key = `${folder}/${uuidv4()}`;
 
-  return `https://${S3_BUCKET}.s3.${AWS_REGION}.amazonaws.com/${key}`;
+  const result = await s3
+    .upload({
+      Bucket: process.env.S3_BUCKET,
+      Key: key,
+      Body: buffer,
+      ContentType: mimetype,
+    })
+    .promise();
+
+  return result.Location;
 };
+
