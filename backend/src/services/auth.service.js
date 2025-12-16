@@ -1,5 +1,5 @@
-import bcrypt from "bcrypt";
 import * as adminRepo from "../repositories/admin.repo.js";
+import bcrypt from "bcrypt";
 
 export const login = async (email, password) => {
   const admin = await adminRepo.findByEmail(email);
@@ -19,4 +19,5 @@ export const login = async (email, password) => {
     companyId: admin.company_id,
   };
 };
+
 
