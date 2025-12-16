@@ -17,6 +17,8 @@ export const getDB = async () => {
       connectionLimit: 10,
     });
   }
+
   return pool;
 };
+
 
