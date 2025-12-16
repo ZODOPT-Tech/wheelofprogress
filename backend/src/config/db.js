@@ -1,20 +1,22 @@
 import mysql from "mysql2/promise";
-import { getSecrets } from "./aws.js";
+import { getSecret } from "./aws.js";
 
 let pool;
 
 export const getDB = async () => {
   if (!pool) {
-    const s = await getSecrets();
+    const secret = await getSecret();
 
     pool = mysql.createPool({
-      host: s.DB_HOST,
-      user: s.DB_USER,
-      password: s.DB_PASSWORD,
-      database: "ARSCCOM",
+      host: secret.DB_HOST,
+      user: secret.DB_USER,
+      password: secret.DB_PASSWORD,
+      database: secret.DB_NAME,
+      port: secret.DB_PORT || 3306,
       waitForConnections: true,
-      connectionLimit: 10
+      connectionLimit: 10,
     });
   }
   return pool;
 };
+
