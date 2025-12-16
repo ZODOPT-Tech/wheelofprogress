@@ -1,12 +1,12 @@
 import mysql from "mysql2/promise";
-import { getDbSecret } from "./aws.js";
+import { getSecret } from "./aws.js";
 
 let pool;
 
-async function initDB() {
+export default async function getDB() {
   if (pool) return pool;
 
-  const secret = await getDbSecret();
+  const secret = await getSecret();
 
   pool = mysql.createPool({
     host: secret.DB_HOST,
@@ -20,12 +20,6 @@ async function initDB() {
   return pool;
 }
 
-export default {
-  execute: async (...args) => {
-    const db = await initDB();
-    return db.execute(...args);
-  },
-};
 
 
 
