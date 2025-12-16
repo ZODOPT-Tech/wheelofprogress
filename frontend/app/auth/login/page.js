@@ -39,13 +39,16 @@ export default function Login() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       const data = await res.json();
 
@@ -54,7 +57,6 @@ export default function Login() {
         return;
       }
 
-      // ✅ Login success
       router.push("/home");
     } catch (err) {
       setError("Unable to connect to server");
@@ -191,3 +193,4 @@ export default function Login() {
     </div>
   );
 }
+
