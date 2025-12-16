@@ -1,11 +1,18 @@
-import * as service from "../services/auth.service.js";
+import * as authService from "../services/auth.service.js";
 
-export const register = async (req, res) => {
-  const id = await service.registerCompany(req.body, req.file);
-  res.json({ companyId: id, next: "/auth/subscription" });
+export const login = async (req, res, next) => {
+  try {
+    const { email, password } = req.body;
+
+    const result = await authService.login(email, password);
+
+    // 🔴 THIS LINE IS MANDATORY
+    return res.status(200).json(result);
+
+  } catch (err) {
+    return res.status(400).json({
+      message: err.message || "Login failed",
+    });
+  }
 };
 
-export const login = async (req, res) => {
-  const token = await service.login(req.body);
-  res.json({ token });
-};
